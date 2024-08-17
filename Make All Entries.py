@@ -153,7 +153,7 @@ else:
     # Append data from Completed.xlsx
 
     # Step 1: Set up headers
-    ws_combined.append(["Item Number", "Shelf Location", "Case Size", "Name", "Exp Date"])
+    ws_combined.append(["Item Number", "Shelf Location", "Case Size", "Name", "Exp Date YYYY-MM-DD"])
 
     # Step 2: Append item numbers and shelf locations from ws_completed_3 into ws_combined
     for row in ws_completed_3.iter_rows(min_row=2, values_only=True):  # Skip headers
