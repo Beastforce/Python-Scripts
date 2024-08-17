@@ -19,6 +19,12 @@ else:
     for row in reversed(rows_to_delete):
         ws.delete_rows(row)
 
+    # Step 2: Delete columns E (5th), F (6th), G (7th), H (8th)
+    ws.delete_cols(5)  # Deletes column E
+    ws.delete_cols(5)  # After E is deleted, F becomes the new 5th column, so delete it
+    ws.delete_cols(5)  # G becomes the new 5th column, so delete it
+    ws.delete_cols(5)  # H becomes the new 5th column, so delete it
+
     # Save the modified file
     wb.save(file_path)
     print(f"Rows containing 'Vendor' in column A have been deleted. Changes saved to '{file_path}'.")
